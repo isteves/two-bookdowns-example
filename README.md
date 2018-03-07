@@ -2,14 +2,20 @@
 
 # Overview
 
-This is a skeleton repo for building two [bookdown](https://bookdown.org/home/about.html) books from one repository. The repo is based on two other bookdown demo repos:
+This is a **skeleton repo** for building two [bookdown](https://bookdown.org/home/about.html) books from one repository. The repo is based on two other bookdown demo repos:
 
 - [bookdown-start](https://github.com/seankross/bookdown-start)
 - [bookdown-demo](https://github.com/rstudio/bookdown-demo).
 
 You can view the two bookdown books here: [dir1](https://isteves.github.io/two-bookdowns-example/dir1/) & [dir2](https://isteves.github.io/two-bookdowns-example/dir2/)
 
-Forking or cloning this repo will give you structure to build your own books. Some files (like `.travis.yml`) may not copy over perfectly, so you may need to rebuild them (using `file.create("FILENAME")` in R and then pasting in the content, for example) or use file-specific functions (`devtools::use_travis()`). I'm not sure which files are "problem files" but I can add that info here if someone tells me.
+**Forking or cloning this repo will give you structure to build your own books.** Some files (like `.travis.yml`) may not copy over perfectly, so you may need to rebuild them (using `file.create("FILENAME")` in R and then pasting in the content, for example, or by using file-specific functions like `devtools::use_travis()`). I'm not sure which files are "problem files" but I can add that info here if someone tells me.
+
+This repo also includes some extra files that are not necessary to the bookdowns:
+
+- png's in the `docs` folder
+- dummy.txt in the `docs` folder (I used it originally to create the `docs` folder, which I think is required)
+- possibly others, but I'm not sure
 
 # Updating the book
 
@@ -83,7 +89,9 @@ I fixed it by going through step 3 (again).
 
 Just update `USERNAME` and `REPO_NAME` in the script at the top of the README file.
 
-```[![Travis-CI Build Status](https://travis-ci.org/USERNAME/REPO_NAME.svg?branch=master)](https://travis-ci.org/USERNAME/REPO_NAME)```
+```
+[![Travis-CI Build Status](https://travis-ci.org/USERNAME/REPO_NAME.svg?branch=master)](https://travis-ci.org/USERNAME/REPO_NAME)
+```
 
 **Overall, I found Travis/YML/bookdown tricky to debug, but the solution is out there! You can check out more resources below:**
 
