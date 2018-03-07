@@ -50,7 +50,8 @@ Click on **Settings** from the home page of your repo and scroll down to the **G
 
 Navigate to your account settings (click your profile picture at the top-right corner of GitHub and then **Settings**). Under **Developer settings**, click **Personal access tokens** and then the `Generate new token` button. Add a token description and check the box next to `repo` under **Select scopes**. Scroll down and click `Generate token` when you finish. Copy the token to the clipboard (there's a handy button to make it super easy) and then go to Travis.
 
-![](https://raw.githubusercontent.com/isteves/two-bookdowns-example/master/docs/generate-token.png =500x)
+<img src="https://raw.githubusercontent.com/isteves/two-bookdowns-example/master/docs/generate-token.png" width="500" />
+
 ![](https://raw.githubusercontent.com/isteves/two-bookdowns-example/master/docs/access-token.png)
 
 Navigate to your repo's Travis page (https://travis-ci.org/USERNAME/REPONAME) and select **More options** --> **Settings**. The **Environmental Variables** section is the one you need to change.
