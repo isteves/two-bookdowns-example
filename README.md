@@ -31,20 +31,20 @@ This renders all the *.Rmd files in each of the two directories (`dir1` and `dir
 
 I'm not 100% on the order of the steps, but the following needs to happen:
 
-#### 1. Activate Travis for your repo.
+### 1. Activate Travis for your repo.
 
 Make an account if you haven't already. Otherwise, just head on over to https://travis-ci.org/profile/YOUR_USERNAME. You may have to sync your account if you made the new repo recently. Once it shows up in the repo list, just flip the switch to activate!
 
 ![](https://raw.githubusercontent.com/isteves/two-bookdowns-example/master/docs/travis-switch.png)
 
-#### 2. Activate GitHub Pages in your repo. 
+### 2. Activate GitHub Pages in your repo. 
 
 Click on **Settings** from the home page of your repo and scroll down to the **GitHub Pages** section. For the source, choose the `gh-pages branch` option. If you don't see it now, choose the `master branch /docs folder` to start and come back to change it after the next few steps. (That's what I had to do.)
 
 ![](https://raw.githubusercontent.com/isteves/two-bookdowns-example/master/docs/repo-settings.png)
 ![](https://raw.githubusercontent.com/isteves/two-bookdowns-example/master/docs/github-pages.png)
 
-#### 3. Link your repo to Travis using an access token.
+### 3. Link your repo to Travis using an access token.
 
 Navigate to your account settings (click your profile picture at the top-right corner of GitHub and then **Settings**). Under **Developer settings**, click **Personal access tokens** and then the `Generate new token` button. Add a token description and check the box next to `repo` under **Select scopes**. Scroll down and click `Generate token` when you finish. Copy the token to the clipboard (there's a handy button to make it super easy) and then go to Travis.
 
@@ -53,14 +53,13 @@ Navigate to your account settings (click your profile picture at the top-right c
 
 Navigate to your repo's Travis page (https://travis-ci.org/USERNAME/REPONAME) and select **More options** --> **Settings**. The **Environmental Variables** section is the one you need to change.
 
-![](https://raw.githubusercontent.com/isteves/two-bookdowns-example/master/docs/travis-more-options.png)
 ![](https://raw.githubusercontent.com/isteves/two-bookdowns-example/master/docs/travis-settings.png)
 
 For the `Name` field in the **Environmental Variables**, enter `GITHUB_TOKEN` (or however you've defined it in the `deploy` section of `.travis.yml`). For the `Value` field, paste in the access token you copied from GitHub. 
 
 ![](https://raw.githubusercontent.com/isteves/two-bookdowns-example/master/docs/travis-env-var.png)
 
-#### 4. Update the YML files in your repo. 
+### 4. Update the YML files in your repo. 
 
 Go through the files and make sure you've edited them to make them specific to your repo.
 
@@ -68,7 +67,7 @@ Go through the files and make sure you've edited them to make them specific to y
 - `_bookdown.yml` (inside `dir1` and `dir2`): the output directory should be `dirX` (where X is 1 or 2) or whatever you rename the directories to. Change the book filename as you see fit (not critical to Travis working)
 - `_output.yml`: changes should not affect Travis (just don't mess with the gitbook section too much)
 
-#### 5. Test it out! 
+### 5. Test it out! 
 
 If everything is set up correctly, then Travis will be happy :green_heart:. If not, check through your YML files and Travis/GitHub repo settings. 
 
@@ -82,10 +81,10 @@ I fixed it by going through step 3 (again).
 
 ## Sources
 
-[Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/)
-Blogpost: [How to Start a Bookdown Book](http://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html)
-Blogpost: [A Beginner's Guide to Travis](https://juliasilge.com/blog/beginners-guide-to-travis/)
-Reference: [GitHub Pages deployment via Travis](https://docs.travis-ci.com/user/deployment/pages/)
-Reference: [Travis yml for R](https://docs.travis-ci.com/user/languages/r)
-Reference: [Requirements for the DESCRIPTION file](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file)
+- Bookdown: [Authoring Books with R Markdown](https://bookdown.org/yihui/bookdown/)
+- Blogpost: [How to Start a Bookdown Book](http://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html)
+- Blogpost: [A Beginner's Guide to Travis](https://juliasilge.com/blog/beginners-guide-to-travis/)
+- Reference: [GitHub Pages deployment via Travis](https://docs.travis-ci.com/user/deployment/pages/)
+- Reference: [Travis yml for R](https://docs.travis-ci.com/user/languages/r)
+- Reference: [Requirements for the DESCRIPTION file](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file)
 
