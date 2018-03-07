@@ -9,6 +9,8 @@ This is a skeleton repo for building two [bookdown](https://bookdown.org/home/ab
 
 You can view the two bookdown books here: [dir1](https://isteves.github.io/two-bookdowns-example/dir1/) & [dir2](https://isteves.github.io/two-bookdowns-example/dir2/)
 
+Forking or cloning this repo will give you structure to build your own books. Some files (like `.travis.yml`) may not copy over perfectly, so you may need to rebuild them (using `file.create("FILENAME")` in R and then pasting in the content, for example) or use file-specific functions (`devtools::use_travis()`). I'm not sure which files are "problem files" but I can add that info here if someone tells me.
+
 ## Updating the book
 
 If you have the repo connected to RStudio as a project (for example, via [this guide](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)), updating the book is easy!  Just edit the *.Rmd, stage & commit the changes, and push to the online repository! Travis will do the rest.
@@ -77,7 +79,13 @@ For example, I got this error while I was testing things out:
 
 I fixed it by going through step 3 (again).
 
-**Overall, I found Travis/YML/bookdown a bit tricky to debug, but the solution is out there! You can check out more resources below:**
+### 6. Update the Travis badge in your README file.
+
+Just update `USERNAME` and `REPO_NAME` in the script at the top of the README file.
+
+```[![Travis-CI Build Status](https://travis-ci.org/USERNAME/REPO_NAME.svg?branch=master)](https://travis-ci.org/USERNAME/REPO_NAME)```
+
+**Overall, I found Travis/YML/bookdown tricky to debug, but the solution is out there! You can check out more resources below:**
 
 ## Sources
 
@@ -87,4 +95,3 @@ I fixed it by going through step 3 (again).
 - Reference: [GitHub Pages deployment via Travis](https://docs.travis-ci.com/user/deployment/pages/)
 - Reference: [Travis yml for R](https://docs.travis-ci.com/user/languages/r)
 - Reference: [Requirements for the DESCRIPTION file](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file)
-
