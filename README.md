@@ -9,7 +9,7 @@ This is a **skeleton repo** for building two [bookdown](https://bookdown.org/hom
 
 You can view the two bookdown books here: [dir1](https://isteves.github.io/two-bookdowns-example/dir1/) & [dir2](https://isteves.github.io/two-bookdowns-example/dir2/)
 
-**Forking or cloning this repo will give you structure to build your own books.** Some files (like `.travis.yml`) may not copy over perfectly, so you may need to rebuild them (using `file.create("FILENAME")` in R and then pasting in the content, for example, or by using file-specific functions like `devtools::use_travis()`). I'm not sure which files are "problem files" but I can add that info here if someone tells me.
+**Forking or cloning this repo will give you structure to build your own books.** Some files (like `.travis.yml`) may not copy over perfectly, so you may need to rebuild them (using `file.create("FILENAME")` in R and then pasting in the content, for example, or by using file-specific functions like `devtools::use_travis()`). I'm not sure which files are "problem files" but I can add that info here if someone tells me. 
 
 This repo also includes some extra files that are not necessary to the bookdowns:
 
