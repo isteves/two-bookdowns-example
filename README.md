@@ -85,9 +85,11 @@ For example, I got this error while I was testing things out:
 
 I fixed it by going through step 3 (again).
 
+Another error I dealt with involved having an incomplete DESCRIPTION file. These are required for packages, so Travis checks that you meet the minimum requirements for them. Unless you use Travis, they aren't strictly required for bookdowns. I used the information [here](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) to fix the error.
+
 ## 6. Update the Travis badge in your README file.
 
-Just update `USERNAME` and `REPO_NAME` in the script at the top of the README file.
+Just update `USERNAME` and `REPO_NAME` and add this script to the top of your README file.
 
 ```
 [![Travis-CI Build Status](https://travis-ci.org/USERNAME/REPO_NAME.svg?branch=master)](https://travis-ci.org/USERNAME/REPO_NAME)
