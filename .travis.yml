@@ -11,6 +11,8 @@ script:
   - cp -vr dir2/dir2 docs
 deploy:
   provider: pages
+  edge:
+    branch: pages-ivar-set
   skip_cleanup: true
   github_token: $GITHUB_TOKEN #set in travis-ci dashboard
   on:
