@@ -7,7 +7,7 @@ df <- data.frame(x = rnorm(20),
                  y = rnorm(20))
 ```
 
-& plots
+& plots!
 
 ```{r}
 plot(df)
