@@ -9,7 +9,7 @@ This is a **skeleton repo** for building two [bookdown](https://bookdown.org/hom
 
 You can view the two bookdown books here: [dir1](https://isteves.github.io/two-bookdowns-example/dir1/) & [dir2](https://isteves.github.io/two-bookdowns-example/dir2/)
 
-**Forking or cloning this repo will give you structure to build your own books.** Some files (like `.travis.yml`) may not copy over perfectly, so you may need to rebuild them (using `file.create("FILENAME")` in R and then pasting in the content, for example, or by using file-specific functions like `devtools::use_travis()`). I'm not sure which files are "problem files" but I can add that info here if someone tells me. 
+**Forking or cloning this repo will give you structure to build your own books.** Some files (like `.travis.yml`) may not copy over perfectly, so you may need to rebuild them (using `file.create("FILENAME")` in R and then pasting in the content or by using file-specific functions like `devtools::use_travis()`). I'm not sure which files are "problem files" but I can add that info here if someone tells me. 
 
 This repo also includes some extra files that are not necessary to the bookdowns:
 
@@ -31,11 +31,9 @@ Travis is used for "continuous integration" for R packages and in this case, boo
 script:
   - Rscript -e 'xfun::in_dir("dir1", bookdown::render_book("index.Rmd", "bookdown::gitbook"))'
   - Rscript -e 'xfun::in_dir("dir2", bookdown::render_book("index.Rmd", "bookdown::gitbook"))'
-  - cp -vr dir1/dir1 docs
-  - cp -vr dir2/dir2 docs
 ```
 
-This renders all the *.Rmd files in each of the two directories (`dir1` and `dir2`) into a book, which is saved into the `output_dir` (specified in `_bookdown.yml`). In order to link the outputs of both files to [GitHub Pages](https://pages.github.com/), I've moved them into the `docs` folder using `cp -vr dirX/dirX docs`. These directories don't actually show up in the `docs` folder of the repo, but do show up in the `gh-pages` branch. (Not sure why, but would love to know!)
+This renders all the *.Rmd files in each of the two directories (`dir1` and `dir2`) into a book, which is saved into the `output_dir` (specified in `_bookdown.yml`). In order to link the outputs of both files to [GitHub Pages](https://pages.github.com/), I've set the `output_dir` as `../docs/dirX`.
 
 I'm not 100% on the order of the steps, but the following needs to happen:
 
