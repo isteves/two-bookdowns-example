@@ -1,6 +1,6 @@
 book_filename: "bookdown-start"
 chapter_name: "Chapter "
-repo: https://github.com/isteves/bookdown-start
+repo: https://github.com/isteves/two-bookdowns-example
 output_dir: ../docs/dir2
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
